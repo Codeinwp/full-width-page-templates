@@ -9,5 +9,3 @@
  */
 
 require_once( dirname( __FILE__ ) . '/class-full-width-templates.php' );
-
-\ThemeIsle\FullWidthTemplates::instance();

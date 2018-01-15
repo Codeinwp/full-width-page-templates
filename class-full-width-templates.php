@@ -45,9 +45,6 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 			add_action( 'wp_enqueue_scripts', array( $this, 'load_theme_overwrites' ) );
 
 			add_action( 'init', array( $this, 'add_support_for_elementor' ) );
-
-			// Add support for builders
-//			$this->add_support_for_elementor();
 		}
 
 		/**
