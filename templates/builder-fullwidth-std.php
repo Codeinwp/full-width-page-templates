@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Elementor Full Width Standard
+ * Template Name: Full Width Standard
  * Template Post Type: page
  *
  * A full width template inherited from the active theme
@@ -9,14 +9,8 @@
  * @version 1.0.0
  */
 
-get_header();
+do_action('fwt_std_before_content');
 
-do_action( 'elementor_before_content_wrapper' );
+do_action('fwt_std_content');
 
-while ( have_posts() ) : the_post();
-	do_action( 'elementor_page_elements' ); // Give your elements priorities so that they hook in the right place.
-endwhile;
-
-do_action( 'elementor_after_content_wrapper' );
-
-get_footer();
+do_action('fwt_std_after_content');

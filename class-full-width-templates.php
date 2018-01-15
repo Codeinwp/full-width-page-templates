@@ -29,8 +29,8 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 		protected function init() {
 			// Add your templates to this array.
 			$this->templates = array(
-				'templates/builder-fullwidth.php'     => __( 'Elementor Full Width Blank', 'elementor-templater' ),
-				'templates/builder-fullwidth-std.php' => __( 'Elementor Full Width', 'elementor-templater' ),
+				'templates/builder-fullwidth.php'     => __( 'Full Width Blank', 'textdomain' ),
+				'templates/builder-fullwidth-std.php' => __( 'Full Width', 'textdomain' ),
 			);
 
 			add_filter( 'theme_page_templates', array( $this, 'add_pages_in_dropdown' ) );
@@ -42,24 +42,24 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 			// Add a filter to the save post to inject out template into the page cache
 			add_filter( 'wp_insert_post_data', array( $this, 'register_project_templates' ) );
 
-			add_action( 'wp_enqueue_scripts', array( $this, 'elementemplater_styles' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'load_theme_overwrites' ) );
 
-			// @TODO We should move this into a function to keep compat?
-			add_action( 'elementor_page_elements', array( $this, 'elementor_page_content' ), 20 );
-		}
+			add_action( 'init', array( $this, 'add_support_for_elementor' ) );
 
-		// @TODO We should move this into a function to keep compat?
-		function elementor_page_content() {
-			the_content();
+			// Add support for builders
+//			$this->add_support_for_elementor();
 		}
 
 		/**
 		 * Adds our template to the page dropdown
+		 *
+		 * @param $templates
+		 *
+		 * @return array
 		 */
-		public function add_pages_in_dropdown( $posts_templates ) {
-			$posts_templates = array_merge( $posts_templates, $this->templates );
-
-			return $posts_templates;
+		public function add_pages_in_dropdown( $templates ) {
+			$templates = array_merge( $templates, $this->templates );
+			return $templates;
 		}
 
 		/**
@@ -74,10 +74,6 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 			}
 
 			$current_template = get_post_meta( $post->ID, '_wp_page_template', true );
-
-			$theme = get_option( 'template' );
-
-			// @TODO maybe overwrite here the page template if a theme as support for it.
 
 			if ( empty( $this->templates[ $current_template ] ) ) {
 				return $template;
@@ -95,9 +91,14 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 			return $template;
 		}
 
+		protected function guess_builder(){
+			$builder = 'elementor';
+			return $builder;
+		}
+
 		/**
 		 * Adds our template to the pages cache in order to trick WordPress
-		 * into thinking the template file exists where it doens't really exist.
+		 * into thinking the template file exists where it doesn't really exist.
 		 */
 		public function register_project_templates( $atts ) {
 
@@ -131,11 +132,28 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 		 * @since   1.0.0
 		 * @return  void
 		 */
-		public function elementemplater_styles() {
+		public function load_theme_overwrites() {
 			$theme    = get_option( 'template' );
-			$filename = plugin_dir_path( __FILE__ ) . 'inc/themes/' . $theme . '/inline-style.php';
-			if ( file_exists( $filename ) ) {
-				include_once( $filename );
+			$style_filename = plugin_dir_path( __FILE__ ) . 'inc/themes/' . $theme . '/inline-style.php';
+			if ( file_exists( $style_filename ) ) {
+				include_once( $style_filename );
+			}
+
+			$func_filename = plugin_dir_path( __FILE__ ) . 'inc/themes/' . $theme . '/functions.php';
+			if ( file_exists( $func_filename ) ) {
+				include_once( $func_filename );
+			}
+		}
+
+		/**
+		 * Add support for Elementor and call the class
+		 */
+		public function add_support_for_elementor(){
+
+			// We check if the Elementor plugin has been installed / activated.
+			if ( defined( 'ELEMENTOR_PATH' ) && class_exists( 'Elementor\Widget_Base' ) ) {
+				require_once( dirname( __FILE__ ) . '/builders/class-elementor-full-width-templates.php' );
+				FullWidthTemplates\Elementor::instance();
 			}
 		}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Elementor Full Width Blank
+ * Template Name: Full Width Blank
  * Template Post Type: page
  *
  * Blank template with minimal HTML required for a page to run
@@ -19,17 +19,12 @@
 
 	<body <?php body_class(); ?>>
 		<?php
-		do_action( 'elementor_content_body_before' );
+		do_action('fwt_blank_before_content');
 
-		do_action( 'elementor_before_content_wrapper' );
+		do_action('fwt_blank_content');
 
-		while ( have_posts() ) : the_post();
-			do_action( 'elementor_page_elements' ); // Give your elements priorities so that they hook in the right place.
-		endwhile;
+		do_action('fwt_blank_after_content');
 
-		do_action( 'elementor_after_content_wrapper' );
-
-		do_action( 'elementor_content_body_after' );
 		wp_footer();
 		?>
 	</body>
