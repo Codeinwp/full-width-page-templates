@@ -9,8 +9,8 @@
  * @version 1.0.0
  */
 
-do_action('fwt_std_before_content');
+do_action('fwpt_std_before_content');
 
-do_action('fwt_std_content');
+do_action('fwpt_std_content');
 
-do_action('fwt_std_after_content');
+do_action('fwpt_std_after_content');

@@ -12,20 +12,20 @@ namespace ThemeIsle\FullWidthTemplates;
 
 class Elementor {
 	/**
-	 * @var Elementor
+	 * @var ThemeIsle\FullWidthTemplates
 	 */
 	protected static $instance = null;
 
 	protected function init(){
 		// for the blank template
-		add_action( 'fwt_blank_before_content', array( $this, 'render_blank_before_content' ) );
-		add_action( 'fwt_blank_content', array( $this, 'render_content' ) );
-		add_action( 'fwt_blank_after_content', array( $this, 'render_blank_after_content' ) );
+		add_action( 'fwpt_blank_before_content', array( $this, 'render_blank_before_content' ) );
+		add_action( 'fwpt_blank_content', array( $this, 'render_content' ) );
+		add_action( 'fwpt_blank_after_content', array( $this, 'render_blank_after_content' ) );
 
 		// for the standard template
-		add_action( 'fwt_std_content', array( $this, 'render_content' ) );
-		add_action( 'fwt_std_before_content', array( $this, 'render_std_before_content' ) );
-		add_action( 'fwt_std_after_content', array( $this, 'render_std_after_content' ) );
+		add_action( 'fwpt_std_content', array( $this, 'render_content' ) );
+		add_action( 'fwpt_std_before_content', array( $this, 'render_std_before_content' ) );
+		add_action( 'fwpt_std_after_content', array( $this, 'render_std_after_content' ) );
 
 		// @TODO We should move this into a function to keep compat?
 		add_action( 'elementor_page_elements', array( $this, 'elementor_page_content' ), 20 );
@@ -83,7 +83,7 @@ class Elementor {
 	 * @static
 	 * @since 1.0.0
 	 * @access public
-	 * @return Elementor
+	 * @return ThemeIsle\FullWidthTemplates
 	 */
 	public static function instance() {
 		if ( is_null( self::$instance ) ) {

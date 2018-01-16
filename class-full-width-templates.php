@@ -10,7 +10,7 @@
 
 namespace ThemeIsle;
 
-if ( ! class_exists( 'FullWidthTemplates' ) ) {
+if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 
 	class FullWidthTemplates {
 		/**
@@ -28,10 +28,10 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 		 */
 		protected function init() {
 			// Add your templates to this array.
-			$this->templates = array(
-				'templates/builder-fullwidth.php'     => __( 'Full Width Blank', 'textdomain' ),
+			$this->templates = apply_filters( 'fwpt_templates_list', array(
+				'templates/builder-fullwidth.php'     => __( 'Full Width - Blank', 'textdomain' ),
 				'templates/builder-fullwidth-std.php' => __( 'Full Width', 'textdomain' ),
-			);
+			) );
 
 			add_filter( 'theme_page_templates', array( $this, 'add_pages_in_dropdown' ) );
 
@@ -44,7 +44,7 @@ if ( ! class_exists( 'FullWidthTemplates' ) ) {
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'load_theme_overwrites' ) );
 
-			add_action( 'init', array( $this, 'add_support_for_elementor' ) );
+			$this->add_support_for_elementor();
 		}
 
 		/**

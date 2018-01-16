@@ -19,11 +19,11 @@
 
 	<body <?php body_class(); ?>>
 		<?php
-		do_action('fwt_blank_before_content');
+		do_action('fwpt_blank_before_content');
 
-		do_action('fwt_blank_content');
+		do_action('fwpt_blank_content');
 
-		do_action('fwt_blank_after_content');
+		do_action('fwpt_blank_after_content');
 
 		wp_footer();
 		?>
