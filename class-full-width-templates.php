@@ -19,6 +19,12 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 		protected static $instance = null;
 
 		/**
+		 * The version of this library
+		 * @var string
+		 */
+		public static $version = '1.0.0';
+
+		/**
 		 * The array of templates injected.
 		 */
 		protected $templates;
@@ -29,8 +35,8 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 		protected function init() {
 			// Add your templates to this array.
 			$this->templates = apply_filters( 'fwpt_templates_list', array(
-				'templates/builder-fullwidth.php'     => __( 'Full Width - Blank', 'textdomain' ),
-				'templates/builder-fullwidth-std.php' => __( 'Full Width', 'textdomain' ),
+				'templates/builder-fullwidth.php'     => '&harr; ' . __( 'Page Builder - Full Width - Blank', 'textdomain' ),
+				'templates/builder-fullwidth-std.php' => '&harr; ' . __( 'Page Builder - Full Width', 'textdomain' ),
 			) );
 
 			add_filter( 'theme_page_templates', array( $this, 'add_pages_in_dropdown' ) );
