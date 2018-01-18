@@ -67,14 +67,13 @@ So make use of the `inline-style.php` and add a snipet like this:
 ```
 <?php
 /* Support for the {Theme Name} theme */
-$style = '.site-content {
+$style = '.page-template-builder-fullwidth-std .site-content {
     width: 100%;
     padding: 0;
     margin:0;
 }';
 wp_add_inline_style( '{theme-style}', $style );
 ```
-
 Where `{theme-style}` must be an enqueued style.(For example, Twenty Seventeen has 'twentyseventeen-style')
 
 Don't forget to add the new theme to this README.md ;)
