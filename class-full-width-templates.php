@@ -137,12 +137,12 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 		 */
 		public function load_theme_overwrites() {
 			$theme    = get_option( 'template' );
-			$style_filename = plugin_dir_path( __FILE__ ) . 'inc/themes/' . $theme . '/inline-style.php';
+			$style_filename = plugin_dir_path( __FILE__ ) . 'themes/' . $theme . '/inline-style.php';
 			if ( file_exists( $style_filename ) ) {
 				include_once( $style_filename );
 			}
 
-			$func_filename = plugin_dir_path( __FILE__ ) . 'inc/themes/' . $theme . '/functions.php';
+			$func_filename = plugin_dir_path( __FILE__ ) . 'themes/' . $theme . '/functions.php';
 			if ( file_exists( $func_filename ) ) {
 				include_once( $func_filename );
 			}
