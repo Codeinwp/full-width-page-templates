@@ -87,8 +87,6 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 			// Just to be safe, we check if the file exist first
 			if ( file_exists( $file ) ) {
 				return $file;
-			} else {
-				echo $file;
 			}
 
 			return $template;

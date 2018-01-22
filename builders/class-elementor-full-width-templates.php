@@ -12,7 +12,7 @@ namespace ThemeIsle\FullWidthTemplates;
 
 class Elementor {
 	/**
-	 * @var ThemeIsle\FullWidthTemplates
+	 * @var Elementor
 	 */
 	protected static $instance = null;
 
@@ -35,8 +35,6 @@ class Elementor {
 	 * Display the WordPress loop
 	 */
 	public function render_content() {
-		global $post;
-
 		while ( have_posts() ) : the_post();
 			do_action( 'elementor_page_elements' ); // Give your elements priorities so that they hook in the right place.
 		endwhile;
@@ -83,7 +81,7 @@ class Elementor {
 	 * @static
 	 * @since 1.0.0
 	 * @access public
-	 * @return ThemeIsle\FullWidthTemplates
+	 * @return Elementor
 	 */
 	public static function instance() {
 		if ( is_null( self::$instance ) ) {
