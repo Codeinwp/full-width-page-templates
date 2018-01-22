@@ -28,8 +28,8 @@ class Plugin_Test extends WP_UnitTestCase {
 	}
 
 	function test_version() {
-		$composer_version = file_get_contents( dirname( dirname( __FILE__ ) ) . 'composer.json' );
+		$composer_version = json_decode( file_get_contents( dirname( dirname( __FILE__ ) ) . '/composer.json' ) );
 
-		$this->asertTrue( $composer_version === \ThemeIsle\FullWidthTemplates::$version );
+		$this->assertTrue( $composer_version->version === \ThemeIsle\FullWidthTemplates::$version );
 	}
 }
