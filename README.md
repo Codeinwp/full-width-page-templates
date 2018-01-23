@@ -2,6 +2,8 @@
 -------------
 A composer library which injects, in WordPress Dashboard, a Full-Width option in the Page Template selector.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff19f3a4a9724f5c97f88d64fbbc1493)](https://www.codacy.com/app/andrei.lupu/full-width-page-templates?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Codeinwp/full-width-page-templates&amp;utm_campaign=Badge_Grade)
+
 #### Supported Builders:
 * A plain simple WordPress page
 * Elementor
