@@ -16,7 +16,7 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 		/**
 		 * @var FullWidthTemplates
 		 */
-		protected static $instance = null;
+		public static $instance = null;
 
 		/**
 		 * The version of this library

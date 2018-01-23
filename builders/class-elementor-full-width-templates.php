@@ -14,7 +14,7 @@ class Elementor {
 	/**
 	 * @var Elementor
 	 */
-	protected static $instance = null;
+	public static $instance = null;
 
 	protected function init(){
 		// for the blank template

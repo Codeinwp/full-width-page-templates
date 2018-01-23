@@ -3,7 +3,7 @@
   "description": "A WordPress library to create full width page templates.",
   "type": "library",
   "version": "1.0.1",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/Codeinwp/full-width-page-templates",
   "authors": [
     {
