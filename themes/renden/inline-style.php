@@ -1,5 +1,5 @@
 <?php
-/* Support for the Renden theme */
+/* Support for Renden theme */
 $renden = '
 		.page-template-builder-fullwidth-std #site-header #intro {
 			display: none;

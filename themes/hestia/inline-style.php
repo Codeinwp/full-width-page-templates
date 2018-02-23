@@ -1,5 +1,5 @@
 <?php
-/* Support for the Hestia theme */
+/* Support for Hestia theme */
 $hestia = '
 		.page-template-builder-fullwidth-std .header > .elementor {
 			padding-top: 70px;

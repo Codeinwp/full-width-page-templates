@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Actions theme */
+	/* Support for Actions theme */
 	$style = '
 		.page-template-builder-fullwidth .main-content-area .main,
         .page-template-builder-fullwidth-std .main-content-area .main  {

@@ -1,5 +1,5 @@
 <?php
-/* Support for the Consulting theme */
+/* Support for Consulting theme */
 $consulting = '
 		.page-template-builder-fullwidth-std #site-header #intro {
 			display: none;

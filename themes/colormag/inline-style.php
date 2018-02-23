@@ -1,5 +1,5 @@
 <?php
-/* Support for the Colormag theme */
+/* Support for Colormag theme */
 $colormag = '
 		.page-template-builder-fullwidth-std #main {
 			padding: 0;

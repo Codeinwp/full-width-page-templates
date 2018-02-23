@@ -1,5 +1,5 @@
 <?php
-/* Support for the Poseidon theme */
+/* Support for Poseidon theme */
 $poseidon = '
 		.page-template-builder-fullwidth-std .site-header {
 			border-bottom: none;

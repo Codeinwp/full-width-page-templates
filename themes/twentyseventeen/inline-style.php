@@ -1,5 +1,5 @@
 <?php
-/* Support for the Twenty Seventeen theme */
+/* Support for Twenty Seventeen theme */
 $style = '.elementor-editor-active .site-content {
 	padding: 2.5em 0 0;
 }

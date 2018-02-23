@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Virtue theme */
+	/* Support for Virtue theme */
 	$edge = '
 		.page-template-builder-fullwidth-std #content {
             padding: 0;

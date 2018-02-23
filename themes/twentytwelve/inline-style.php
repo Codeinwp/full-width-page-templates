@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Twenty Twelve theme */
+	/* Support for Twenty Twelve theme */
 	$style = '
 			.page-template-builder-fullwidth-std #page {
 				padding: 0;

@@ -1,5 +1,5 @@
 <?php
-/* Support for the Kyle theme */
+/* Support for Kyle theme */
 $kyle = '
 		.page-template-builder-fullwidth-std .main-wrapper .container {
 			padding: 0;

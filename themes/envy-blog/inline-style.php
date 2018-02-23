@@ -1,5 +1,5 @@
 <?php
-/* Support for the Envy Blog theme */
+/* Support for Envy Blog theme */
 $envyblog = '
 		.page-template-builder-fullwidth-std .container {
 			padding: 0;

@@ -1,5 +1,5 @@
 <?php
-/* Support for the Editorial theme */
+/* Support for Editorial theme */
 $editorial = '
 			.page-template-builder-fullwidth-std {
 				display: none;

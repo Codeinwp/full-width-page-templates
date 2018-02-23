@@ -1,5 +1,5 @@
 <?php
-/* Support for the Virtue theme */
+/* Support for Virtue theme */
 $virtue = '.page-template-builder-fullwidth .headerclass,
 .page-template-builder-fullwidth .footerclass {
     display: none;

@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Storefront theme */
+	/* Support for Storefront theme */
 	$css = '
 		.page-template-builder-fullwidth-std .site-header {
 			border: none;

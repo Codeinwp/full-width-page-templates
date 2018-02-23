@@ -1,5 +1,5 @@
 <?php
-/* Support for the Avant theme */
+/* Support for Avant theme */
 $avant = '
 		.page-template-builder-fullwidth-std #page > .site-container {
 			padding: 0;

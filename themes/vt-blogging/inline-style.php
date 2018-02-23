@@ -1,5 +1,5 @@
 <?php
-/* Support for the VT Blogging theme */
+/* Support for VT Blogging theme */
 $vtb = '
 		.page-template-builder-fullwidth-std .site-content {
 			padding: 0;

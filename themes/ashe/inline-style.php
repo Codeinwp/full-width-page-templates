@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Ashe theme */
+	/* Support for Ashe theme */
 	$ashe = '
 			@media (min-width: 979px) {
 				.page-template-builder-fullwidth-std #main-nav {

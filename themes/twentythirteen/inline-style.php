@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Twenty Thirteen theme */
+	/* Support for Twenty Thirteen theme */
 	$thirteen = '
 	    .page-template-builder-fullwidth-std .site {
             max-width: 100%;

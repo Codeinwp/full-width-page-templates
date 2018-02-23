@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Lodestar theme */
+	/* Support for Lodestar theme */
 	$lodestar = '
 				.page-template-builder-fullwidth-std .site-content {
 					padding: 0;

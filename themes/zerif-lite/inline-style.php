@@ -1,5 +1,5 @@
 <?php
-/* Support for the Zerif Lite theme */
+/* Support for Zerif Lite theme */
 $style = '
 		.page-template-builder-fullwidth {
 			overflow: hidden;

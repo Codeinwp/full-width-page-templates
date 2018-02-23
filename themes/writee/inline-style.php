@@ -1,5 +1,5 @@
 <?php
-/* Support for the Writee theme */
+/* Support for Writee theme */
 $writee = '
 		.page-template-builder-fullwidth-std p,
 		 .page-template-builder-fullwidth p {

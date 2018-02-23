@@ -1,5 +1,5 @@
 <?php
-/* Support for the Shapely theme */
+/* Support for Shapely theme */
 $shapely = '
 		.page-template-builder-fullwidth-std .site .main-container .page-title-section {
 			display: none;

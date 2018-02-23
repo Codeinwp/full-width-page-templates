@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Vantage theme */
+	/* Support for Vantage theme */
 	$vantage = '
 		.page-template-builder-fullwidth-std #main {
             padding: 0;

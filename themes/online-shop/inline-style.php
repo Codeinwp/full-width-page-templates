@@ -1,5 +1,5 @@
 <?php
-/* Support for the Online Shop theme */
+/* Support for Online Shop theme */
 $style = '
 		.page-template-builder-fullwidth-std .site-header .header-wrapper {
 			padding-bottom: 0;

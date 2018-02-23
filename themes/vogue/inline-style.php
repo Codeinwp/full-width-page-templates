@@ -1,5 +1,5 @@
 <?php
-/* Support for the Vogue theme */
+/* Support for Vogue theme */
 $vogue = '
 		.page-template-builder-fullwidth-std #page > .site-container {
 			padding: 0;

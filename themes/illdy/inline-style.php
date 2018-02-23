@@ -1,5 +1,5 @@
 <?php
-/* Support for the Illdy theme */
+/* Support for Illdy theme */
 $illdy = '
 		.page-template-builder-fullwidth-std {
 			

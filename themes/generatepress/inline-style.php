@@ -1,5 +1,5 @@
 <?php
-	/* Support for the GeneratePress theme */
+	/* Support for GeneratePress theme */
 	$style = '	
 		.page-template-builder-fullwidth-std #page {
 			margin: 0;

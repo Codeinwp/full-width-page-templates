@@ -1,5 +1,5 @@
 <?php
-/* Support for the Primer theme */
+/* Support for Primer theme */
 $primer = '
 		.page-template-builder-fullwidth-std .page-title-container {
 			display: none;

@@ -1,5 +1,5 @@
 <?php
-/* Support for the Nikko Portfolio theme */
+/* Support for Nikko Portfolio theme */
 $style = '
 		.page-template-builder-fullwidth-std #page {
 			padding: 0;

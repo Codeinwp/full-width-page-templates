@@ -1,5 +1,5 @@
 <?php
-/* Support for the Envo Business theme */
+/* Support for Envo Business theme */
 $envob = '
 		.page-template-builder-fullwidth-std .main-container {
 			padding: 0;

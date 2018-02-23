@@ -1,5 +1,5 @@
 <?php
-	/* Support for the OceanWP theme */
+	/* Support for OceanWP theme */
 	$oceanwp = '
 		.page-template-builder-fullwidth-std .page-header {
 			display: none;

@@ -1,5 +1,5 @@
 <?php
-/* Support for the Hueman theme */
+/* Support for Hueman theme */
 $hueman = '
 		.page-template-builder-fullwidth-std #header {
 			padding-bottom: 0;

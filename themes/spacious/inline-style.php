@@ -1,5 +1,5 @@
 <?php
-/* Support for the Spacious theme */
+/* Support for Spacious theme */
 $spacious = '	
 		.page-template-builder-fullwidth-std {
 			padding: 0;

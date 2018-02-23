@@ -1,5 +1,5 @@
 <?php
-/* Support for the Flash theme */
+/* Support for Flash theme */
 $flash = '
 		.page-template-builder-fullwidth-std #page #flash-breadcrumbs {
 			display: none;

@@ -1,5 +1,5 @@
 <?php
-/* Support for the MaxStore theme */
+/* Support for MaxStore theme */
 $maxstore = '
 			.page-template-builder-fullwidth-std .rsrc-footer .rsrc-author-credits {
 				border-top: none;

@@ -1,5 +1,5 @@
 <?php
-/* Support for the News Portal theme */
+/* Support for News Portal theme */
 $newsportal = '
 		.page-template-builder-fullwidth-std #page .site-content,
 		 .page-template-builder-fullwidth-std #page .site-footer {

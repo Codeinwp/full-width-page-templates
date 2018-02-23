@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Sydney theme */
+	/* Support for Sydney theme */
 	$sydney = '
 		.page-template-builder-fullwidth-std .page-wrap,
         .page-template-builder-fullwidth-std .page-wrap .content-wrapper {

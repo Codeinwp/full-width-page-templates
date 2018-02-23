@@ -1,5 +1,5 @@
 <?php
-/* Support for the Total theme */
+/* Support for Total theme */
 $total = '
 		.page-template-builder-fullwidth-std #ht-colophon {
 			margin: 0;

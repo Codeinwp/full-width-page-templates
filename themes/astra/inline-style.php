@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Astra theme */
+	/* Support for Astra theme */
 	$astra = '
 			.page-template-builder-fullwidth-std #content .ast-container {
 				max-width: 100%;

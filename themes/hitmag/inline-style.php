@@ -1,5 +1,5 @@
 <?php
-/* Support for the HitMag theme */
+/* Support for HitMag theme */
 $hitmag = '
 		.page-template-builder-fullwidth-std .hitmag-wrapper {
 			margin: 0;
