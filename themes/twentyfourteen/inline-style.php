@@ -1,9 +1,8 @@
 <?php
-	/* Support for the Twenty Fourteen theme */
+	/* Support for Twenty Fourteen theme */
 	$style = '
-	    .page-template-builder-fullwidth-std .elementor-page .site {
+	    .page-template-builder-fullwidth-std #page {
             max-width: 100%;
-			overflow: hidden;
         }
         .page-template-builder-fullwidth-std .site::before {
             display: none;

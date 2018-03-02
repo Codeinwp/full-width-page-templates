@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Twenty Fifteen theme */
+	/* Support for Twenty Fifteen theme */
 	$style = '
 	    body.page-template-builder-fullwidth:before {
 		    display: none;

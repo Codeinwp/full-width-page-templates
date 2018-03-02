@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Twenty Sixteen theme */
+	/* Support for Twenty Sixteen theme */
 	$style = '	    
 		body.page-template-builder-fullwidth.elementor-page,
 		body.page-template-builder-fullwidth-std.elementor-page {

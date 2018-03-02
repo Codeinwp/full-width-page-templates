@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Genesis theme */
+	/* Support for Genesis theme */
 	$genesis = '
 		.page-template-builder-fullwidth .site-inner,
 		.page-template-builder-fullwidth-std .site-inner {

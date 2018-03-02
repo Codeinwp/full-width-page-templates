@@ -1,9 +1,9 @@
 <?php
-	/* Support for the Twenty Thirteen theme */
+	/* Support for Twenty Thirteen theme */
 	$thirteen = '
-	    .page-template-builder-fullwidth-std .elementor-page .site {
+	    .page-template-builder-fullwidth-std .site {
             max-width: 100%;
-			overflow: hidden;
+            border: none;
         }
         .page-template-builder-fullwidth-std .site-header {
             max-width: 100%;

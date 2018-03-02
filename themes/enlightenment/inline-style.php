@@ -1,5 +1,5 @@
 <?php
-	/* Support for the Actions theme */
+	/* Support for Actions theme */
 	$style = '
 		.elementor-body .site {
 			overflow-x: visible;
