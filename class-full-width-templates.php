@@ -35,8 +35,8 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 		protected function init() {
 			// Add your templates to this array.
 			$this->templates = apply_filters( 'fwpt_templates_list', array(
-				'templates/builder-fullwidth.php'     => '&harr; ' . __( 'Page Builder - Full Width - Blank', 'textdomain' ),
-				'templates/builder-fullwidth-std.php' => '&harr; ' . __( 'Page Builder - Full Width', 'textdomain' ),
+				'templates/builder-fullwidth.php'     => html_entity_decode( '&harr; ' ) . __( 'Page Builder - Full Width - Blank', 'textdomain' ),
+				'templates/builder-fullwidth-std.php' => html_entity_decode( '&harr; ' ) . __( 'Page Builder - Full Width', 'textdomain' ),
 			) );
 
 			add_filter( 'theme_page_templates', array( $this, 'add_pages_in_dropdown' ) );
