@@ -10,6 +10,9 @@
 
 namespace ThemeIsle;
 
+use ThemeIsle\FullWidthTemplates\Elementor;
+use ThemeIsle\FullWidthTemplates\None;
+
 if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 
 	class FullWidthTemplates {
@@ -33,6 +36,7 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 		 * Defines the library behaviour
 		 */
 		protected function init() {
+
 			// Add your templates to this array.
 			$this->templates = apply_filters( 'fwpt_templates_list', array(
 				'templates/builder-fullwidth.php'     => html_entity_decode( '&harr; ' ) . __( 'Page Builder - Full Width - Blank', 'textdomain' ),
@@ -92,11 +96,6 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 			return $template;
 		}
 
-		protected function guess_builder(){
-			$builder = 'elementor';
-			return $builder;
-		}
-
 		/**
 		 * Adds our template to the pages cache in order to trick WordPress
 		 * into thinking the template file exists where it doesn't really exist.
@@ -145,17 +144,27 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 				include_once( $func_filename );
 			}
 		}
-
+		public function is_elementor(){
+			if ( defined( 'ELEMENTOR_PATH' ) && class_exists( 'Elementor\Widget_Base' ) ) {
+				return true;
+			}
+			return false;
+		}
 		/**
 		 * Add support for Elementor and call the class
 		 */
 		public function add_support_for_elementor(){
 
 			// We check if the Elementor plugin has been installed / activated.
-			if ( defined( 'ELEMENTOR_PATH' ) && class_exists( 'Elementor\Widget_Base' ) ) {
+			if( $this->is_elementor()){
 				require_once( dirname( __FILE__ ) . '/builders/class-elementor-full-width-templates.php' );
 				FullWidthTemplates\Elementor::instance();
+				return;
 			}
+
+			require_once( dirname( __FILE__ ) . '/builders/class-none-full-width-templates.php' );
+			FullWidthTemplates\None::instance();
+			return;
 		}
 
 		/**
@@ -165,7 +174,7 @@ if ( ! class_exists( '\ThemeIsle\FullWidthTemplates' ) ) {
 		 * @return FullWidthTemplates
 		 */
 		public static function instance() {
-			if ( is_null( self::$instance ) ) {
+			if (  null === self::$instance  ) {
 				self::$instance = new self();
 				self::$instance->init();
 			}
